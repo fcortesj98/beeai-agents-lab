@@ -1,0 +1,12 @@
+# Runtime dependencies (verified with Python 3.11).
+# The full environment from the IBM lab is kept in original_lab/requirements-lab-freeze.txt.
+
+beeai-framework[wikipedia]==0.1.35
+
+# Recent LiteLLM releases (pulled in by beeai-framework) import `mcp` on every
+# model call, even when MCP is not used. Without it, every call fails with
+# "No module named 'mcp'" wrapped in a generic ChatModelError.
+mcp>=2.0
+
+# Optional: loads credentials from a .env file in the project root.
+python-dotenv>=1.0

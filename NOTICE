@@ -1,0 +1,31 @@
+BeeAI Agentic Lab
+=================
+
+This project is a refactored and reorganized version of the hands-on lab
+"Building Agentic AI Systems with the BeeAI Framework", published by
+IBM Skills Network as part of the IBM RAG and Agentic AI Professional
+Certificate.
+
+  Original lab author: Wojciech "Victor" Fulmyk
+  Original lab code and guide: © IBM Corporation. All rights reserved.
+  The lab content is licensed under the Apache License, Version 2.0.
+
+The original lab scripts (t1.py - t12.py) are included unmodified in the
+`original_lab/` directory for reference. All agent designs, prompts, sample
+queries, schemas and the calculator tool originate from that lab.
+
+Changes made in this version (Apache 2.0, section 4(b)):
+  - Split the twelve standalone scripts into a Python package with separate
+    modules for configuration, model creation, prompts, schemas, tools,
+    agents and runnable examples.
+  - Replaced six near-duplicate agent scripts (t5-t10) with one
+    configurable builder and reusable requirement sets.
+  - Added a command-line interface, `.env` support, error hints, and tests.
+  - Replaced the calculator's `eval` with an AST-based evaluator and made the
+    prompt template tolerate literal braces.
+  - Applied the lab's model defaults at run time instead of in a separate
+    `t1.py` process.
+
+This project depends on the BeeAI Framework (https://github.com/i-am-bee/beeai-framework),
+an open-source project under the Linux Foundation AI & Data, licensed under
+Apache 2.0.
